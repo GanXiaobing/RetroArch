@@ -42,18 +42,18 @@ int menu_hash_get_help_chs_enum(enum msg_hash_enums msg, char *s, size_t len)
             break;
          case RARCH_FAST_FORWARD_HOLD_KEY:
             snprintf(s, len,
-                  "按住来快进。 \n"
+                  "按住以快进。 \n"
                   " \n"
-                  "放开按键来取消快进。"
+                  "放开按键以取消快进。"
                   );
             break;
          case RARCH_PAUSE_TOGGLE:
             snprintf(s, len,
-                  "在暂停和不暂停状态间切换。");
+                  "在暂停和非暂停状态间切换。");
             break;
          case RARCH_FRAMEADVANCE:
             snprintf(s, len,
-                  "Frame advance when content is paused.");
+                  "暂停时前进帧。");
             break;
          case RARCH_SHADER_NEXT:
             snprintf(s, len,
@@ -214,10 +214,10 @@ int menu_hash_get_help_chs_enum(enum msg_hash_enums msg, char *s, size_t len)
                "账号以及密码.");
          break;
       case MENU_ENUM_LABEL_CHEEVOS_USERNAME:
-         snprintf(s, len, "Username for your Retro Achievements account.");
+         snprintf(s, len, "Retro Achievements账号的用户名。");
          break;
       case MENU_ENUM_LABEL_CHEEVOS_PASSWORD:
-         snprintf(s, len, "Password for your Retro Achievements account.");
+         snprintf(s, len, "Retro Achievements账号的密码。");
          break;
       case MENU_ENUM_LABEL_USER_LANGUAGE:
          snprintf(s, len, "依据选择的语言来本地化菜单和其他屏显消息。 \n"
@@ -232,13 +232,13 @@ int menu_hash_get_help_chs_enum(enum msg_hash_enums msg, char *s, size_t len)
          snprintf(s, len, "改变屏显文字的字体。");
          break;
       case MENU_ENUM_LABEL_GAME_SPECIFIC_OPTIONS:
-         snprintf(s, len, "自动加载游戏内容指定的核心选项.");
+         snprintf(s, len, "自动加载游戏内容指定的核心选项。");
          break;
       case MENU_ENUM_LABEL_AUTO_OVERRIDES_ENABLE:
-         snprintf(s, len, "Automatically load override configurations.");
+         snprintf(s, len, "自动读取强制加载的设置A。");
          break;
       case MENU_ENUM_LABEL_AUTO_REMAPS_ENABLE:
-         snprintf(s, len, "自动加载输入重映射文件.");
+         snprintf(s, len, "自动加载输入重映射文件。");
          break;
       case MENU_ENUM_LABEL_SORT_SAVESTATES_ENABLE:
          snprintf(s, len, "Sort save states in folders \n"
@@ -249,15 +249,13 @@ int menu_hash_get_help_chs_enum(enum msg_hash_enums msg, char *s, size_t len)
                "named after the libretro core used.");
          break;
       case MENU_ENUM_LABEL_RESUME_CONTENT:
-         snprintf(s, len, "Exits from the menu and returns back \n"
-               "to the content.");
+         snprintf(s, len, "从菜单退出并返回到内容。");
          break;
       case MENU_ENUM_LABEL_RESTART_CONTENT:
-         snprintf(s, len, "Restarts the content from the beginning.");
+         snprintf(s, len, "从头开始内容。");
          break;
       case MENU_ENUM_LABEL_CLOSE_CONTENT:
-         snprintf(s, len, "Closes the content and unloads it from \n"
-               "memory.");
+         snprintf(s, len, "关闭内容并内存中卸载。");
          break;
       case MENU_ENUM_LABEL_UNDO_LOAD_STATE:
          snprintf(s, len, "If a state was loaded, content will \n"
@@ -4718,23 +4716,23 @@ const char *msg_hash_to_str_chs(enum msg_hash_enums msg)
       case MSG_SAVED_SUCCESSFULLY_TO:
          return "成功保存至";
       case MSG_SAVING_RAM_TYPE:
-         return "Saving RAM type";
+         return "正在保存RAM类型";
       case MSG_SAVING_STATE:
-         return "Saving state";
+         return "正在保存即时存档";
       case MSG_SCANNING:
          return "扫描中";
       case MSG_SCANNING_OF_DIRECTORY_FINISHED:
          return "已完成对文件夹的扫描";
       case MSG_SENDING_COMMAND:
-         return "Sending command";
+         return "正在发送命令";
       case MSG_SEVERAL_PATCHES_ARE_EXPLICITLY_DEFINED:
          return "Several patches are explicitly defined, ignoring all...";
       case MSG_SHADER:
          return "Shader";
       case MSG_SHADER_PRESET_SAVED_SUCCESSFULLY:
-         return "Shader preset saved successfully.";
+         return "Shader预置文件成功保存";
       case MSG_SKIPPING_SRAM_LOAD:
-         return "Skipping SRAM load.";
+         return "正跳过SRAM读取。";
       case MSG_SLOW_MOTION:
          return "慢动作。";
       case MSG_SLOW_MOTION_REWIND:
@@ -4742,17 +4740,17 @@ const char *msg_hash_to_str_chs(enum msg_hash_enums msg)
       case MSG_SORRY_UNIMPLEMENTED_CORES_DONT_DEMAND_CONTENT_NETPLAY:
          return "Sorry, unimplemented: cores that don't demand content cannot participate in netplay.";
       case MSG_SRAM_WILL_NOT_BE_SAVED:
-         return "SRAM will not be saved.";
+         return "SRAM将不予保存。";
       case MSG_STARTING_MOVIE_PLAYBACK:
          return "视频回放.";
       case MSG_STARTING_MOVIE_RECORD_TO:
          return "Starting movie record to";
       case MSG_STATE_SIZE:
-         return "State size";
+         return "即时存档大小";
       case MSG_STATE_SLOT:
          return "状态存档槽";
       case MSG_TAKING_SCREENSHOT:
-         return "Taking screenshot.";
+         return "正在截图。";
       case MSG_TO:
          return "to";
       case MSG_UNDID_LOAD_STATE:
@@ -4764,15 +4762,15 @@ const char *msg_hash_to_str_chs(enum msg_hash_enums msg)
       case MSG_UNPAUSED:
          return "取消暂停。";
       case MSG_UNRECOGNIZED_COMMAND:
-         return "Unrecognized command";
+         return "无法识别的命令";
       case MSG_USING_CORE_NAME_FOR_NEW_CONFIG:
-         return "Using core name for new config.";
+         return "用核心名称作为新配置文件名称。";
       case MSG_USING_LIBRETRO_DUMMY_CORE_RECORDING_SKIPPED:
-         return "Using libretro dummy core. Skipping recording.";
+         return "使用libretro假核心。正在跳过记录。";
       case MSG_VALUE_CONNECT_DEVICE_FROM_A_VALID_PORT:
-         return "Connect device from a valid port.";
+         return "从可用接口连接设备。";
       case MSG_VALUE_DISCONNECTING_DEVICE_FROM_PORT:
-         return "Disconnecting device from port";
+         return "设备从接口断开中";
       case MSG_VALUE_REBOOTING:
          return "正在重启……";
       case MSG_VALUE_SHUTTING_DOWN:
@@ -4780,9 +4778,9 @@ const char *msg_hash_to_str_chs(enum msg_hash_enums msg)
       case MSG_VERSION_OF_LIBRETRO_API:
          return "libretro API版本";
       case MSG_VIEWPORT_SIZE_CALCULATION_FAILED:
-         return "Viewport size calculation failed! Will continue using raw data. This will probably not work right ...";
+         return "Viewport大小计算失败！将使用原始数据以便继续。这将导致无法正确运行……";
       case MSG_VIRTUAL_DISK_TRAY:
-         return "virtual disk tray.";
+         return "虚拟光驱托盘。";
       default:
 #if 0
          RARCH_LOG("Unimplemented: [%d]\n", msg);
